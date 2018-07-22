@@ -643,6 +643,9 @@ body {
     width: 100%;
     filter: grayscale(30%);
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.8); }
+    @media (max-width: 56.25em) {
+      .popup__img {
+        display: none; } }
   .popup__right {
     width: 66.6666%;
     display: table-cell;

@@ -621,6 +621,7 @@ body {
     border-radius: 3px;
     display: table;
     overflow: hidden;
+    text-align: center;
     box-sizing: border-box;
     transform: translate(-50%, -50%) scale(0.5);
     transition: all .4s .2s;
@@ -637,7 +638,8 @@ body {
     backface-visibility: hidden; }
     @media (max-width: 56.25em) {
       .popup__left {
-        vertical-align: middle; } }
+        vertical-align: middle;
+        width: 0; } }
   .popup__img {
     display: block;
     width: 100%;
@@ -653,7 +655,8 @@ body {
     padding: 3rem 5rem; }
     @media (max-width: 56.25em) {
       .popup__right {
-        padding: 1rem 3rem; } }
+        padding: 1rem 2rem;
+        width: 100%; } }
   .popup__text {
     column-count: 3;
     -webkit-hyphens: auto;
@@ -666,7 +669,8 @@ body {
       .popup__text {
         column-gap: 2rem;
         font-size: 2rem;
-        column-count: 2; } }
+        column-count: 2;
+        text-align: left; } }
   .popup__close:link, .popup__close:visited {
     position: absolute;
     top: 2.5rem;

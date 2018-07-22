@@ -29,6 +29,7 @@
         border-radius: 3px;
         display: table;
         overflow: hidden;
+        text-align: center;
         box-sizing: border-box;
         transform: translate(-50%, -50%) scale(.5);
         transition: all .4s .2s;
@@ -50,6 +51,7 @@
             backface-visibility: hidden;
             @include respond(tab-port){
             vertical-align: middle;
+                width: 0;
         }
         }
          &__img{
@@ -59,6 +61,7 @@
              box-shadow: 0 2rem 4rem rgba($color-black, .8);
              @include respond(tab-port){
                  display: none;
+                 
              }
                 
             }
@@ -70,7 +73,8 @@
              vertical-align: middle;
             padding: 3rem 5rem;
             @include respond(tab-port){
-            padding: 1rem 3rem;
+            padding: 1rem 2rem;
+                width: 100%;
         }
            
           
@@ -89,6 +93,7 @@ hyphens: auto;
             column-gap: 2rem;
             font-size: 2rem;
             column-count: 2;
+            text-align: left;
         }
     }
     &__close{

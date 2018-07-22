@@ -1,0 +1,45 @@
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary, 0.75), rgba($color-primary-light, 0.75)), url(../img2/amsterdam-night.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    @include respond(phone){
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    color: $color-white;
+    &__logo-box{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    font-size: 4rem;
+        &:hover{
+    
+    animation: fromInside;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+        }
+        }
+    
+&__main-text{
+    
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+    }
+
+}
+#scroll {
+    transition: all 2s 2s;
+    &:target{
+        transition-delay: 5s;
+    }
+}
+

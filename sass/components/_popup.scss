@@ -1,0 +1,109 @@
+.popup{
+    position: fixed;
+    background-color: rgba($color-black, .7);
+    height: 100vh;
+    z-index: 300;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s;
+    &:target{
+        visibility: visible;
+        opacity: 1;
+    }
+    &:target &__content{
+        transform: translate(-50%, -50%) scale(1);
+        visibility: visible;
+    }
+    
+        
+    
+    &__content{
+        @include absCenter;
+        width: 75%;
+        background-color: $color-white;
+        box-shadow: 0 2rem 8rem rgba($color-black, .4);
+        border-radius: 3px;
+        display: table;
+        overflow: hidden;
+        box-sizing: border-box;
+        transform: translate(-50%, -50%) scale(.5);
+        transition: all .4s .2s;
+        opacity: 1;
+        visibility: hidden;
+        @include respond(tab-port){
+            height: 90%;
+            width: 90%;
+            
+            
+        }
+        
+    }
+        
+        &__left{
+            width: 33.3333%;
+            display: table-cell;  
+            vertical-align: middle;
+            backface-visibility: hidden;
+            @include respond(tab-port){
+            vertical-align: middle;
+        }
+        }
+         &__img{
+                display: block;
+                width: 100%;
+             filter:grayscale(30%);
+             box-shadow: 0 2rem 4rem rgba($color-black, .8);
+                
+            }
+       
+     
+        &__right{
+        width: 66.6666%;
+            display: table-cell;
+             vertical-align: middle;
+            padding: 3rem 5rem;
+            @include respond(tab-port){
+            padding: 1rem 3rem;
+        }
+           
+          
+    
+    
+    }
+    &__text{
+        column-count: 3;
+        -webkit-hyphens: auto;
+-moz-hyphens: auto;
+-ms-hyphens: auto;
+hyphens: auto;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-grey-light-2; 
+        @include respond(tab-port){
+            column-gap: 2rem;
+            font-size: 2rem;
+            column-count: 2;
+        }
+    }
+    &__close{
+        &:link,
+        &:visited{
+        position: absolute;
+        top: 2.5rem;
+        color: $color-grey-dark;
+        right: 2.5rem;
+        z-index: 1000;
+        text-decoration: none;
+        font-size: 5rem;
+        line-height: 1rem;
+            transition: all .2s;
+           &:hover{
+            color: $color-primary;
+        } 
+            }
+        
+    }
+}
